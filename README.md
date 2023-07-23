@@ -14,6 +14,7 @@ with basic create read update delete CRUD functionalities
  -node server.js to run the file
 
  *2.2)nodemon*
+ 
  -install nodemon "npm install -g nodemon"
  -unlike node it will restart the server automatically if changes are created
  -optional=> you can change the script for nodemon <filename> in the package.json file by adding a new script as "dev" : "nodemon server.js"
@@ -24,6 +25,7 @@ with basic create read update delete CRUD functionalities
  
 
 *2.3)react to request + Express router*
+
  - in order to react to request we have to set route handlers
  - a route handler is a function that reacts to Http requests like GET, PUT, POST etc
  - first set up the get() route handler
@@ -32,7 +34,9 @@ with basic create read update delete CRUD functionalities
  })
  - when a user visits the root url '/', this sends a get request to this url ie server, which will trigger the callback function (req,res)=>{}
  - the callback function takes in the type of request and a response object to send a msg
+ - 
 *2.4) API endpoints for todo app*
+   
  - for our app(CRUD) we need the following endpoints
   1)Create a new task= POST
     - /todos
@@ -56,6 +60,7 @@ with basic create read update delete CRUD functionalities
  - export it with "module.exports=router"
 
 *2.5)Mongodb and mongoose*
+
  -open atlas and go to database 
  -click on connect, connect with native drivers. Copy the uri. Store it in the env file as MONGO_URI= copied uri
  -install mongoose and require('mongoose') in server.js
