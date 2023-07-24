@@ -2,10 +2,11 @@
 a basic to do list web app to learn the basics of javascipt and MERN
 with basic create read update delete CRUD functionalities
 
-1.Intialization(considering node already installed)
+**1.Intialization(considering node already installed)**
  -"npm init -y" into backend directory which creates a package.json file to manage dependencies
  - install dependecies like express mongodb
 **2.Express app setup**
+
 *2.1)installing express*
  -create a server.js file in the backend folder
  -import or 'require' the express module 
@@ -77,8 +78,19 @@ with basic create read update delete CRUD functionalities
     .catch((error)=>{
         console.log(error)
     })
- 
-
+ - mongodb connected if there is no error
+*2.6)Models & Schemas*
+  -a schema represents the structure of a particular document, either completely or just a portion of the document
+  -schema answers "what will the data in this collection look like?
+  -A model defines a programming interface for interacting with the database (read, insert, update, etc)
+  -"Are there any records matching this query?" or "Add a new document to the collection".
+  -for every task object we should have the following:
+    ->title
+    ->description
+    ->taskstatus
+  - import mongoose in a new file todoschemas.js in a new models folder
+  -mongoose helps us to create these models and schemas for the data in databse
+  - to create a schema use the Schema method of mongoose. schema=mongoose.Schema
 
 
 
