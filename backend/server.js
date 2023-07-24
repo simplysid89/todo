@@ -1,9 +1,11 @@
 const express= require('express')
 const mongoose=require('mongoose')
-const todoroutes=require('./routes/todos')
+const todoroutes=require('./routes/todosroutes')
 require('dotenv').config()
 //start the express app instance
 const app=express()
+//middleware
+app.use(express.json())
 
 //route handlers
 app.use('/api/todos',todoroutes)
